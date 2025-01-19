@@ -17,10 +17,11 @@ Including another URLconf
 import os
 from dotenv import load_dotenv
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 load_dotenv()
 
 urlpatterns = [
     path(os.getenv("ADMIN_PATH"), admin.site.urls),
+    path("users/", include("users.urls")),
 ]
