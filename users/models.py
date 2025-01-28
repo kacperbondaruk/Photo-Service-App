@@ -7,3 +7,6 @@ class Profile(models.Model):
     address = models.CharField(max_length=255, blank=True)
     birth_date = models.DateField(null=True, blank=True)
     preferred_photography_type = models.CharField(max_length=255, blank=True)
+
+    def __str__(self):
+        return f"{self.user.username}'s profile"
