@@ -3,7 +3,5 @@ from .views import DashboardView, HomeView, my_custom_login_view
 
 urlpatterns = [
     path("dashboard/", DashboardView.as_view(), name="dashboard"),
-    path('', HomeView.as_view(), name='home'),
     path('login/', my_custom_login_view, name='login'),
-
 ]
