@@ -1,3 +1,4 @@
+/* Animation for fadeIn effect (used for menu transition) */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -7,52 +8,152 @@
     }
 }
 
+/* Custom font definition for the 'Alisha' font family */
+@font-face {
+    font-family: 'Alisha';
+    src: url('../fonts/alisha.regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* General body styles: Sets background, font, and basic layout */
 body {
-    background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
-    color: #fff;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
+    background: radial-gradient(#1a1a1a, #0d0d0d); /* Dark radial gradient */
+    color: #fff; /* White text color */
+    display: flex; /* Set a flexible layout */
+    flex-direction: column; /* Stack content vertically */
+    font-family: 'Poppins', serif; /* Modern font for body */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margins */
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: transparent;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links li {
-    margin: 0 15px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-}
-
-.nav-links a:hover {
-    color: #ffcc00;
-}
-
+/* Footer styles: Positioned at the bottom with animations */
 footer {
-    margin-top: auto;
-    text-align: center;
-    padding: 1rem;
-    animation: fadeIn 1s ease-in-out;
+    animation: fadeIn 1s ease-in-out; /* Fade-in effect for footer */
+    margin-top: auto; /* Push footer to the bottom */
+    padding: 1rem; /* Add padding for spacing */
+    text-align: center; /* Center footer content */
 }
 
+/* Navbar container styling */
 .navbar {
-    animation: fadeIn 1s ease-in-out;
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+    background-color: transparent; /* Transparent navbar background */
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Push logo and links apart */
+    align-items: center; /* Center vertically */
+    padding: 10px 20px; /* Padding around the navbar */
+}
+
+/* Logo styling */
+.logo a {
+    color: white; /* Logo text color */
+    font-family: 'Alisha', sans-serif; /* Custom logo font */
+    font-size: 2rem;
+    text-decoration: none; /* Remove underline */
+    transition: font-size 0.3s ease; /* Smooth hover effect */
+}
+
+/* Adjust logo size on hover */
+.logo a:hover {
+    font-size: 2.1rem; /* Slightly enlarge the logo */
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex; /* Horizontal by default */
+    list-style: none; /* Remove bullets */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+}
+
+.ham {
+    display: none;
+}
+
+/* Navigation Links - Dropdown Style for Mobile (Hidden Initially) */
+@media only screen and (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide links by default */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Float the menu */
+        top: 60px; /* Position dropdown below the navbar */
+        right: 20px; /* Align dropdown with hamburger */
+        background: #222; /* Dark dropdown background */
+        padding: 20px;
+        border-radius: 5px; /* Rounded corners */
+        animation: fadeIn 0.3s ease-in-out; /* Add fade-in animation */
+    }
+
+    /* Show links when .active class is toggled */
+    .nav-links.active {
+        display: flex; /* Display links as a dropdown */
+        flex-direction: column;
+    }
+
+    /* Show Hamburger Icon on Smaller Screens */
+    .ham {
+        display: block; /* Show hamburger icon */
+    }
+}
+
+
+/* Links inside the navigation bar */
+.nav-links li {
+    margin: 0 15px; /* Add horizontal spacing between links */
+}
+
+.nav-links li a {
+    color: white; /* White text for links */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.5rem; /* Larger text size */
+    font-family: 'Roboto', serif; /* Modern font style */
+    transition: color 0.3s ease; /* Add smooth hover effect */
+}
+
+/* Hover effect for navigation links */
+.nav-links li a:hover {
+    color: #ffcc00; /* Change link text to gold on hover */
+}
+
+/* Hamburger Menu Styling */
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight */
+    transition: transform 400ms; /* Smooth rotation when active */
+    -moz-user-select: none; /* Disable text selection */
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.hamRotate.active {
+    transform: rotate(45deg); /* Rotate icon when active */
+}
+
+.line {
+    fill: none; /* No fill for lines */
+    stroke: white; /* White stroke for hamburger lines */
+    stroke-width: 5.5; /* Line thickness */
+    stroke-linecap: round; /* Rounded edges for lines */
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms; /* Smooth animation */
+}
+
+/* Top Line */
+.ham4 .top {
+    stroke-dasharray: 40 121;
+}
+
+/* Bottom Line */
+.ham4 .bottom {
+    stroke-dasharray: 40 121;
+}
+
+/* Active state for top and bottom lines */
+.ham4.active .top {
+    stroke-dashoffset: -68px;
+}
+
+.ham4.active .bottom {
+    stroke-dashoffset: -68px;
 }

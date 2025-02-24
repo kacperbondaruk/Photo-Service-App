@@ -18,12 +18,12 @@ import os
 from dotenv import load_dotenv
 from django.contrib import admin
 from django.urls import path, include
-from users.views import HomeView
+from core.views import HomeView
 
 load_dotenv()
 
 urlpatterns = [
     path(os.getenv("ADMIN_PATH"), admin.site.urls),
     path('', HomeView.as_view(), name='home'),
-    path("users/", include("users.urls")),
+    path("core/", include("core.urls")),
 ]

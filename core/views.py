@@ -7,7 +7,7 @@ from .forms import LoginForm
 
 class DashboardView(View):
     def get(self, request):
-        return render(request, "users/dashboard.html")
+        return render(request, "core/dashboard.html")
 
 class HomeView(TemplateView):
     template_name = 'home.html'
@@ -27,4 +27,4 @@ def my_custom_login_view(request):
     else:
         form = LoginForm()
 
-    return render(request, 'users/login.html', {'form': form})
+    return render(request, 'core/login.html', {'form': form})

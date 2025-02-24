@@ -4,13 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strona Fotograficzna</title>
+    <title>Casper Valentino</title>
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
 <body>
     <header>
         <nav class="navbar">
-                <h1 class="logo">Twoja Fotografia</h1>
+                <h1 class="logo"><a href="">Casper Valentino</a></h1>
+
+                <svg
+                    class="ham hamRotate ham4"
+                    viewBox="0 0 100 100"
+                    width="60"
+                    onclick="this.classList.toggle('active')"
+                >
+                    <path
+                        class="line top"
+                        d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20"
+                    />
+                    <path
+                        class="line middle"
+                        d="m 70,50 h -40"
+                    />
+                    <path
+                        class="line bottom"
+                        d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20"
+                    />
+            </svg>
+
+
+
                 <ul class="nav-links">
                     <li><a href="#about">Portfolio</a></li>
                     <li><a href="#about">O nas</a></li>
@@ -28,5 +51,6 @@
             <p>© 2024 Casper Valentino</p>
         </div>
     </footer>
+<script src="{% static 'js/nav.js' %}"></script>
 </body>
 </html>

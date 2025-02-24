@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "users.apps.UsersConfig",
+    "core.apps.CoreConfig",
 ]
 
 MIDDLEWARE = [
@@ -75,6 +75,10 @@ TEMPLATES = [
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
+]
+
+MEDIA_ROOT = [
+    os.path.join(BASE_DIR, 'media'),
 ]
 
 WSGI_APPLICATION = "showcase.wsgi.application"
