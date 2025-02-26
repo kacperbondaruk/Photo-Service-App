@@ -22,7 +22,7 @@ body {
     color: #fff; /* White text color */
     display: flex; /* Set a flexible layout */
     flex-direction: column; /* Stack content vertically */
-    font-family: 'Poppins', serif; /* Modern font for body */
+    font-family: 'Raleway', serif; /* Modern font for body */
     height: 100vh; /* Full viewport height */
     margin: 0; /* Remove default margins */
 }
@@ -73,16 +73,21 @@ footer {
 
 /* Navigation Links - Dropdown Style for Mobile (Hidden Initially) */
 @media only screen and (max-width: 768px) {
+
+    .logo a {
+        font-size: 1.4rem; /* Make Font Smaller */
+    }
+
     .nav-links {
         display: none; /* Hide links by default */
         flex-direction: column; /* Stack links vertically */
         position: absolute; /* Float the menu */
-        top: 60px; /* Position dropdown below the navbar */
-        right: 20px; /* Align dropdown with hamburger */
+        top: 4.5rem; /* Position dropdown below the navbar */
+        right: 2.1rem; /* Align dropdown with hamburger */
         background: #222; /* Dark dropdown background */
         padding: 20px;
         border-radius: 5px; /* Rounded corners */
-        animation: fadeIn 0.3s ease-in-out; /* Add fade-in animation */
+        animation: fadeIn 0.5s; /* Add fade-in animation */
     }
 
     /* Show links when .active class is toggled */
@@ -100,7 +105,7 @@ footer {
 
 /* Links inside the navigation bar */
 .nav-links li {
-    margin: 0 15px; /* Add horizontal spacing between links */
+    margin: 0 5px; /* Add horizontal spacing between links */
 }
 
 .nav-links li a {
