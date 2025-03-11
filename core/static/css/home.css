@@ -1,18 +1,74 @@
+.body {
+    background-color: #F3F3F3;
+}
 
+.section-container {
+    width: 80vw;
+    max-width: 80vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-items: center;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
 
+.portrait-intro-image {
+    width: 600px;
+    height: 700px;
+    object-fit: contain;
+    object-position: center;
+}
 
+.intro-section-content-column-wrapper {
+    margin: auto;
+}
 
+.intro-section-content-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.intro-portrait-title-text {
+    font-weight: lighter;
+    color: #3A4750; /* Logo text color */
+    font-size: 2rem;
+}
+
+.intro-section-offer-btn {
+    color: #F3F3F3;
+    background-color: #3A4750;
+    outline: none;
+    border: none;
+    height: 3rem;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    width: 50%;
+    cursor: pointer;
+}
+
+/* Section Introduction Home */
+.intro-section {
+    font-family: 'Roboto', sans-serif;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    justify-content: center;
+    margin: 3rem auto 3rem auto;
+}
 
 
 /* Section Gallery Home */
 .images-section {
-
-  max-width: 80vw;
-  display: flex;
-  flex-wrap: wrap;
-  margin: auto;
-  justify-items: center;
-  justify-content: center;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      margin: auto;
+      justify-items: center;
+      justify-content: center;
 }
 
 .my-image {
@@ -23,9 +79,24 @@
   object-position: center;
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 @media only screen and (max-width: 1600px) {
    .images-section {
-      max-width: 90vw;
+       max-width: 90vw;
    }
+
+    .portrait-intro-image {
+        width: 500px;
+        height: 600px;
+    }
 }
+
+
