@@ -6,51 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casper Valentino</title>
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <header>
         <nav class="navbar">
+            <div class="logo-container">
                 <h1 class="logo"><a href="">Casper Valentino</a></h1>
-
-                <svg
-                    class="ham hamRotate ham4"
-                    viewBox="0 0 100 100"
-                    width="60"
-                    onclick="this.classList.toggle('active')"
-                >
-                    <path
-                        class="line top"
-                        d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20"
-                    />
-                    <path
-                        class="line middle"
-                        d="m 70,50 h -40"
-                    />
-                    <path
-                        class="line bottom"
-                        d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20"
-                    />
+            </div>
+            <svg
+                class="ham hamRotate ham4"
+                viewBox="0 0 100 100"
+                width="60"
+                onclick="this.classList.toggle('active')"
+            >
+                <path
+                    class="line top"
+                    d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20"
+                />
+                <path
+                    class="line middle"
+                    d="m 70,50 h -40"
+                />
+                <path
+                    class="line bottom"
+                    d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20"
+                />
             </svg>
-
-
-
-                <ul class="nav-links">
-                    <li><a href="#about">Portfolio</a></li>
-                    <li><a href="#about">O nas</a></li>
-                    <li><a href="#gallery">Galeria</a></li>
-                    <li><a href="#contact">Kontakt</a></li>
-                </ul>
+            <div class="nav-links">
+                <button>PORTFOLIO</button>
+                <button>O NAS</button>
+                <button>GALERIA</button>
+                <button>KONTAKT</button>
+            </div>
         </nav>
     </header>
-
     {% block content %}
     {% endblock %}
 
     <footer>
         <div class="footer-bottom">
-            <p>© 2024 Casper Valentino</p>
+            <p>Copyright © All rights reserved.</p>
         </div>
     </footer>
-<script src="{% static 'js/nav.js' %}"></script>
+    <script src="{% static 'js/nav.js' %}"></script>
+    <script src="{% static 'js/gallery.js' %}"></script>
 </body>
 </html>

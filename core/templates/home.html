@@ -1,2 +1,22 @@
 {% extends "base.html" %}
 
+{% load static %}
+
+
+<link rel="stylesheet" href="{% static 'core/css/home.css' %}">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+{% block content %}
+    <div class="section-container">
+        <div class="images-section">
+          <img class="my-image" src="../static/images/ja.jpg" />
+          <img class="my-image" src="../static/images/Karolina.jpg" />
+          <img class="my-image" src="../static/images/Zuza.jpg" />
+          <img class="my-image" src="../static/images/Karolina.jpg" />
+          <img class="my-image" src="../static/images/Karolina-6.jpg"  />
+          <img class="my-image" src="../static/images/ja.jpg" />
+          <img class="my-image" src="../static/images/Zuza.jpg" />
+          <img class="my-image" src="../static/images/Karolina.jpg" />
+      </div>
+    </div>
+{% endblock %}

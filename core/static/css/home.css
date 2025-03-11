@@ -1,0 +1,31 @@
+
+
+
+
+
+
+/* Section Gallery Home */
+.images-section {
+
+  max-width: 80vw;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-items: center;
+  justify-content: center;
+}
+
+.my-image {
+  padding: 0 1rem 0 1rem;
+  width: 300px;
+  height: 400px;
+  object-fit: contain;
+  object-position: center;
+}
+
+
+@media only screen and (max-width: 1600px) {
+   .images-section {
+      max-width: 90vw;
+   }
+}
